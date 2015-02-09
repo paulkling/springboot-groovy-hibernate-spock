@@ -1,21 +1,20 @@
 package com.github.srekapalli.sample
 
-import com.mangofactory.swagger.plugin.EnableSwagger
+import com.github.srekapalli.sample.config.SwaggerConfig
+import groovy.transform.CompileStatic
 import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
-import org.springframework.web.servlet.config.annotation.EnableWebMvc
+import org.springframework.context.annotation.Import
 
+@CompileStatic
 @Configuration
-@EnableAutoConfiguration
-@EnableWebMvc
-@EnableSwagger
-@ComponentScan
+@ComponentScan("com.github.srekapalli.sample.resources")
+@Import([SwaggerConfig])
 class SampleApplication {
 
-	static void main(String[] args) throws Exception {
-		SpringApplication.run(SampleApplication.class, args)
-	}
+    static void main(String[] args) throws Exception {
+        SpringApplication.run(SampleApplication.class, args)
+    }
 
 }
