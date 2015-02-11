@@ -1,4 +1,4 @@
-# Restful WS using SpringBoot, Groovy, Hibernate, Swagger enabled and spock for testing.
+# Restful WS using SpringBoot, Groovy, Swagger enabled and spock for testing.
 
 You can build and run this sample using Gradle (>1.6):
 
@@ -15,3 +15,4 @@ $ java -jar build/libs/*.jar
 ```
 
 Then access the app via a browser (or curl) on http://localhost:8080.
+
